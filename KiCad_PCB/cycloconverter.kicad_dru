@@ -1,0 +1,6 @@
+(version 1)
+
+(rule "HV track-to-track clearance"
+    (condition "A.Type == 'Track' && B.Type == 'Track' && (A.hasNetclass('POWER_AC') || A.hasNetclass('HV_SENSE') || A.hasNetclass('HV_CONTROL')) && (B.hasNetclass('POWER_AC') || B.hasNetclass('HV_SENSE') || B.hasNetclass('HV_CONTROL'))")
+    (constraint clearance (min 2mm))
+)
